@@ -1,0 +1,203 @@
+/* Vars */
+:root {
+    --primary: black;
+    --background: #eedc9a;
+    --card: #fff;
+}
+* {
+    box-sizing: border-box;
+}
+
+/* Fonts, colors */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--background);
+    font-size: 10px;
+    margin: 0;
+}
+
+/* Text size, weight */
+h1, h2 {
+    font-weight: 900;
+}
+
+h1 {
+    font-size: 4.5rem;
+}
+
+h3 {
+    font-weight: 700;
+}
+
+header h3 {
+    font-size: 1.7rem;
+}
+
+/* Banner */
+header {
+    text-align: center;
+    height: 80vh;
+    width: 100%;
+}
+header h1 {
+    padding-top: 20vh;
+    font-size: 6rem;
+}
+/* Banner rotating text */
+header h3 {
+    display: inline-block;
+}
+.word {
+    position: absolute;
+    width: 220px;
+    opacity: 0;
+    font-weight: 700;
+    font-size: 1.75rem;
+    margin-left: 5px;
+}
+.letter {
+    display: inline-block;
+    position: relative;
+    float: left;
+    transform: translateZ(25px);
+    transform-origin: 50% 50% 25px;
+}
+
+.letter.out {
+    transform: rotateX(90deg);
+    transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+    transform: rotateX(-90deg);
+}
+
+.letter.in {
+    transform: rotateX(0deg);
+    transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.wisteria {
+    color: #8e44ad;
+}
+
+.belize {
+    color: #2980b9;
+}
+
+.pomegranate {
+    color: #c0392b;
+}
+
+.green {
+    color: #16a085;
+}
+
+.midnight {
+    color: #2c3e50;
+}
+
+
+/* Filter selection */
+nav ul {
+    list-style-type: none;
+    padding: 10px;
+    font-size: 1.3rem;
+    border: 4px solid var(--primary);
+    border-radius: 15px;
+    width: fit-content;
+    text-align: center;
+    margin: auto;
+}
+nav ul li {
+    display: inline-block;
+    border-right: 4px solid var(--primary);
+    cursor: pointer;
+    padding: 10px 20px;
+    font-weight: 400;
+}
+nav ul li:last-child {
+    border-right: none;
+}
+
+nav ul li:hover {
+    color: #3f3f3f;
+}
+
+/* Cards */
+.item {
+    max-width: 300px;
+    border: 3px solid var(--primary);
+    border-radius: 15px;
+    margin: 20px;
+    padding: 0;
+    background-color: var(--card);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.item img {
+    max-height: 300px;
+    max-width: 100%;
+    border-radius: 20px;
+    margin: 0;
+    padding: 10px;
+}
+
+.item h3 {
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 700;
+}
+.item p {
+    font-size: 0.8rem;
+    text-align: center;
+    padding-bottom: 10px;
+    font-weight: 400;
+}
+/* List */
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Sect. Title */
+#section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 900;
+    padding: 20px;
+}
+
+/* About */
+
+.about {
+    background: #403f3e;
+    padding: 10px;
+    color: white;
+}
+.about h2 {
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center;
+    padding: 20px;
+}
+.about p {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 15px 100px;
+    line-height: 20px;
+}
+
+/* Footer */
+footer {
+    background: var(--background);
+    padding: 20px;
+    font-size: 1rem;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
